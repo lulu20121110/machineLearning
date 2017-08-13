@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Parsing JSON</title>
+	<script>
+		function jsonParse(){
+			var instring=prompt("Enter JSON object");
+			var out="";
+			myObject=JSON.parse(instring);
+			for(i in myObject){
+				out+="Property:"+i+"="+myObject[i]+"\n";
+			}
+			alert(out);
+		}
+	</script>
+</head>
+<body onload="jsonParse()">
+</body>
+</html>

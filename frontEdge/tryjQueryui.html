@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css"
+		href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/themes/smoothness/jquery-ui.css"/>
+	
+	<style>
+		div{font:12px normal arial,helvetica;}
+		#dragdiv{
+			width:150px;
+			height:50px;
+			background-color:#eeffee;
+			border:1px solid black;
+			padding:5px;
+		}
+		#dropdiv{
+		position:absolute;
+		top:80px;
+		left:100
+	</style>
+	<title>Drag and Drop</title>
+	<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+	<script>
+		$(document).ready(function(){
+			$("#animateMe").text("Changing shape...").animate(
+				{
+					width:"400px",
+					height:"200px"
+				},5000,function(){
+					$(this).text("Fading away...").fadeOut(4000);
+					}
+			);
+		});
+	</script>
+</head>
+<body>
+	<div id="animateMe"></div>
+</body>
+</html>
